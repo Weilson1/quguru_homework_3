@@ -18,21 +18,16 @@ public class QAguru_homework_3 {
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();
         $("#wiki-pages-box").$(byText("Show 2 more pages…")).scrollTo().click();
-//      $("[data-filterable-for=wiki-pages-filter]").$(byText("Show 2 more pages…")).click();
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
         $(".markdown-body")
-//      $(byText("Using JUnit5 extend test class:")).scrollTo()
                 .shouldHave(text("Using JUnit5 extend test class:"));
     }
+
     @Test
-    void DragandDropTest(){
+    void DragandDropTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
         $("#column-a").shouldHave(text("B"));
-        sleep(5000);
-
-
-
     }
 }
