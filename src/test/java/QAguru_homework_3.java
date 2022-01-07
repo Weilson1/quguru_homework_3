@@ -29,5 +29,6 @@ public class QAguru_homework_3 {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
         $("#column-a").shouldHave(text("B"));
+        $("#column-b").shouldHave(text("A"));
     }
 }
